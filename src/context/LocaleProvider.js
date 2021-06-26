@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState } from 'react'
 import PropTypes from 'prop-types'
 import { useLanguages } from '@transifex/react'
 
@@ -19,19 +19,8 @@ export function useAvailableLocales() {
 }
 
 export function LocaleProvider({ children }) {
-    const [availableLocales, setAvailableLocales] = useState([])
+    const availableLocales = useLanguages()
     const [locale, setLocale] = useState(window.localStorage.getItem('locale'))
-
-    useEffect(() => {
-        const locales = window.localStorage.getItem('locales')
-        setAvailableLocales(
-            locales && locales.length > 0 ? locales : useLanguages()
-        )
-
-        return () => {
-            setAvailableLocales([])
-        }
-    }, [])
 
     function switchLocale(locale) {
         window.localStorage.setItem('locale', locale)
