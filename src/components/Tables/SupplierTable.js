@@ -480,7 +480,9 @@ const SupplierTable = (props) => {
                                 height: '75%',
                                 minHeight: '250px'
                             }}>
-                            <p>No data available</p>
+                            <p>
+                                <T _str="No data available" />
+                            </p>
                         </div>
                     )}
                 </div>
@@ -504,7 +506,7 @@ const SupplierTable = (props) => {
                         <span className="text-opacity-75 text-primary-dark">
                             {totalItems}
                         </span>{' '}
-                        suppliers.
+                        <T _str="suppliers" />
                     </p>
                 </div>
 

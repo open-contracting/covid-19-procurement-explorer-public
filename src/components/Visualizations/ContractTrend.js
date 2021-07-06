@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react'
 import PropTypes from 'prop-types'
 import { isEmpty } from 'lodash'
 import { useSelector } from 'react-redux'
+import { T } from '@transifex/react'
 import CountryService from '../../services/CountryService'
 import { Loader, PerCapitaSwitcher } from '../Utilities'
 import { BarChartRace } from './Charts'
@@ -88,7 +89,9 @@ const ContractTrend = (props) => {
             {loading ? (
                 <Loader />
             ) : isEmpty(chartData) ? (
-                <div className="mt-4">No data available</div>
+                <div className="mt-4">
+                    <T _str="No data available" />
+                </div>
             ) : (
                 !isEmpty(chartData) && (
                     <div className="md:-mt-10">

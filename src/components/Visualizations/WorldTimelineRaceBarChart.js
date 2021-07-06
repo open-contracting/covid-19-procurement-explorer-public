@@ -3,6 +3,7 @@ import Select from 'react-select'
 import { useSelector } from 'react-redux'
 import { FullScreen, useFullScreenHandle } from 'react-full-screen'
 import { isEmpty } from 'lodash'
+import { T } from '@transifex/react'
 import { BarChartRace } from './Charts'
 import CountryService from '../../services/CountryService'
 import { continentSelectList, countryFlag } from '../../helpers/country'
@@ -134,7 +135,7 @@ const WorldTimelineRaceBarChart = () => {
                     {loading ? (
                         <Loader />
                     ) : isEmpty(chartData) ? (
-                        'No data available'
+                        <T _str="No data available" />
                     ) : (
                         !isEmpty(chartData) && (
                             <BarChartRace

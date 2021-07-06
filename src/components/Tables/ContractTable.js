@@ -287,7 +287,9 @@ const ContractTable = (props) => {
                                         height: '75%',
                                         minHeight: '250px'
                                     }}>
-                                    <p>No data available</p>
+                                    <p>
+                                        <T _str="No data available" />
+                                    </p>
                                 </div>
                             )}
                         </div>
@@ -312,7 +314,7 @@ const ContractTable = (props) => {
                                     <span className="text-opacity-75">
                                         {totalItems}
                                     </span>{' '}
-                                    contracts
+                                    <T _str="contracts" />
                                 </p>
                             </div>
 

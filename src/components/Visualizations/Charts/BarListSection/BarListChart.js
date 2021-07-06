@@ -16,7 +16,9 @@ function BarListChart(props) {
         <div className="custom-horizontal-bar">
             <ul className="custom-scrollbar h-80 overflow-y-auto pr-4">
                 {data.length < 1 || false ? (
-                    <li>No Data Available</li>
+                    <li>
+                        <T _str="No data available" />
+                    </li>
                 ) : (
                     data &&
                     data.map((bar_value, index) => {
