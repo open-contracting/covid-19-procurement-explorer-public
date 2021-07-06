@@ -357,12 +357,14 @@ const SupplierTable = (props) => {
                                         <T _str="Supplier ID" />
                                     )}
                                 </th>
-                                <th style={{ width: '10%' }}>
-                                    {tableHeaderSpan(
-                                        'country__name',
-                                        <T _str="Country" />
-                                    )}
-                                </th>
+                                {!hasCountry() && (
+                                    <th style={{ width: '10%' }}>
+                                        {tableHeaderSpan(
+                                            'country__name',
+                                            <T _str="Country" />
+                                        )}
+                                    </th>
+                                )}
                                 <th style={{ width: '6%' }}>
                                     {tableHeaderSpan(
                                         'tender_count',
