@@ -479,7 +479,9 @@ const BuyerTable = (props) => {
                                 height: '75%',
                                 minHeight: '250px'
                             }}>
-                            <p>No data available</p>
+                            <p>
+                                <T _str="No data available" />
+                            </p>
                         </div>
                     )}
                 </div>
@@ -503,7 +505,7 @@ const BuyerTable = (props) => {
                         <span className="text-opacity-75 text-primary-dark">
                             {totalItems}
                         </span>{' '}
-                        buyers.
+                        <T _str="buyers" />
                     </p>
                 </div>
 

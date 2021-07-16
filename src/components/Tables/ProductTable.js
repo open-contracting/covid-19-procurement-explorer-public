@@ -232,7 +232,9 @@ const ProductTable = (props) => {
                                 height: '75%',
                                 minHeight: '250px'
                             }}>
-                            <p>No data available</p>
+                            <p>
+                                <T _str="No data available" />
+                            </p>
                         </div>
                     )}
                 </div>
